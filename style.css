@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.2;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg,  rgba(22, 5, 51, 0.904) 0%,  rgba(22, 15, 51, 0.603) 90%);
+}
+
+.form {
+    position: relative;
+    width: 20rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+ .form__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1.2rem;
+        outline: none;
+        padding: 1.75rem 1.25rem 1.5rem 1.25rem;
+        background: none;
+    }
+
+    .form__input:focus {
+        border-color: rgb(179, 218, 240);;
+    }
+
+ .form__label {
+     position: absolute;
+     left: 1rem;
+     top: 1.2rem;
+     padding: 0 0.5rem;
+     color: #fff;
+     cursor: text;
+     transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+     background-color: inherit;
+ }
+
+ .form__input:focus ~ .form__label,
+ .form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+   top: 3px;
+   font-size: 0.8rem;
+   left: 0.8rem;
+ }
+
+ .forgotten-password {
+     color: #fff;
+     
+ }
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 2.8rem;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.login-btn:hover {
+    background: rgb(179, 218, 240);
+    transition: 0.4s ease-in;
+    color: rgb(0, 0, 0);
+}
